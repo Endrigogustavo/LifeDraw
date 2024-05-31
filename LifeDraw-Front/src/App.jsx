@@ -1,17 +1,18 @@
-import Home from './components/home/Home'
-import Card from './components/Cards/Cards'
-import About from './components/About/About'
-import Galery from './components/Galery/galery'
+import Home from './components/HomePage'
+import UpdateImg from './components/UploadImg'
+import ListarImg from './components/ListarImg'
+import { Routes, Route } from "react-router-dom";
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <Home/>
-      <Card/>
-      <About/>
-      <Galery/>
+      <Routes>
+          <Route path="/home" element={<Home/>} />
+          <Route path="/update" element={<UpdateImg/>} />
+          <Route path="/listar" element={<ListarImg/>} />
+      </Routes>
     </>
   )
 }
