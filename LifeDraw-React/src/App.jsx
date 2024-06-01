@@ -1,6 +1,6 @@
 import Home from './components/HomePage'
 import UpdateImg from './components/UploadImg'
-import ListarImg from './components/ListarImg'
+import ListarImg from './components/ListImg/ListarImg'
 import { Routes, Route } from "react-router-dom";
 import './App.css'
 
