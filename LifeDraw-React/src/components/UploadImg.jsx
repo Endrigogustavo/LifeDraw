@@ -6,7 +6,18 @@ function App() {
   const [preview, setPreview] = useState('');
   const [images, setImages] = useState([]);
 
+  useEffect(() => {
+    fetchImages();
+  }, []);
 
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/images');
+      setImages(response.data);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
@@ -17,14 +28,14 @@ function App() {
     e.preventDefault();
     const formData = new FormData();
     formData.append('image', image);
-  
+
     try {
       const response = await axios.post('http://localhost:8080/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log('Server response:', response.data); // Verifique se a resposta do servidor está correta
+      console.log(response.data);
       alert('Image uploaded successfully');
       fetchImages(); // Fetch images again after successful upload
     } catch (error) {
@@ -41,7 +52,6 @@ function App() {
         {preview && <img src={preview} alt="preview" width="100" />}
         <button type="submit">Upload</button>
       </form>
-
     </div>
   );
 }

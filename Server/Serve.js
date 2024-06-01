@@ -103,23 +103,23 @@ app.get('/list' , (req,res)=> {
 
   const upload = multer({ storage: storage });
   
+  // Rota para lidar com o upload da imagem
   app.post('/upload', upload.single('image'), (req, res) => {
     if (!req.file) {
       return res.status(400).send('No file uploaded.');
     }
   
     const filePath = `/uploads/${req.file.filename}`;
-    console.log('File uploaded to:', filePath); // Verifique o valor de filePath
-    const sql = 'INSERT INTO images (filename, filepath) VALUES (?, ?)';
+    const sql = 'INSERT INTO imagens (nome, caminho) VALUES (?, ?)';
     db.query(sql, [req.file.filename, filePath], (err, result) => {
       if (err) {
         console.error('Error inserting into database:', err);
         return res.status(500).send('Error saving to database.');
       }
-      res.json({ filePath }); // Certifique-se de que filePath está definido corretamente
+      res.json({ filePath });
     });
   });
-  
+
 
   app.get('/images', (req, res) => {
     const sql = 'SELECT * FROM imagens';
