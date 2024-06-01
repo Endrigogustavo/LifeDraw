@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/06/2024 às 02:44
+-- Tempo de geração: 01/06/2024 às 18:03
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -38,17 +38,17 @@ CREATE TABLE `imagens` (
 --
 
 INSERT INTO `imagens` (`id`, `nome`, `caminho`) VALUES
-(1, 'gojo', 'm'),
-(2, 'Gojo', 'w'),
-(3, '_wallpaper_____satoru_gojo____jujutsu_kaisen_by_dwayn_kin_dee1piy.png', 'uploads\\fdad24e40e91fb815f3cd0d8cbff38dd'),
-(4, 'minato card.jpg', '1717179321087.jpg'),
-(5, 'hunter_x_drrr_ed_background_by_kugukiugu_d2nj03p-pre.jpg', '1717179636319.jpg'),
-(6, 'rainden.jpg', '1717179866021.jpg'),
-(7, 'hunter_x_drrr_ed_background_by_kugukiugu_d2nj03p-pre.jpg', 'undefined_1717200093883.jpg'),
-(8, '1717200750396.jpg', '/uploads/1717200750396.jpg'),
-(9, '1717200906493.jpg', '/uploads/1717200906493.jpg'),
-(10, '1717201462685.jpg', '/uploads/1717201462685.jpg'),
-(11, '1717201472155.jpg', '/uploads/1717201472155.jpg');
+(17, '1717245528237.jpg', '/uploads/1717245528237.jpg'),
+(18, '1717245636299.jpg', '/uploads/1717245636299.jpg'),
+(19, '1717245646583.jpg', '/uploads/1717245646583.jpg'),
+(20, '1717245661613.jpg', '/uploads/1717245661613.jpg'),
+(21, '1717245675103.webp', '/uploads/1717245675103.webp'),
+(22, '1717245684142.jpg', '/uploads/1717245684142.jpg'),
+(23, '1717245694414.jpg', '/uploads/1717245694414.jpg'),
+(24, '1717245702109.jpg', '/uploads/1717245702109.jpg'),
+(25, '1717245711206.jpg', '/uploads/1717245711206.jpg'),
+(26, '1717245720266.jpg', '/uploads/1717245720266.jpg'),
+(27, '1717245733138.jpg', '/uploads/1717245733138.jpg');
 
 --
 -- Índices para tabelas despejadas
@@ -68,7 +68,7 @@ ALTER TABLE `imagens`
 -- AUTO_INCREMENT de tabela `imagens`
 --
 ALTER TABLE `imagens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
